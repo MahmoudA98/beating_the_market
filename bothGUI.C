@@ -1,4 +1,5 @@
 {   TString OurTString;
+//this message just tests git commits, if you see it, i managed to make commit this change to github
 // main frame
    TGMainFrame *OurFrame = new TGMainFrame(gClient->GetRoot(),10,10,kMainFrame | kVerticalFrame);
    OurFrame->SetLayoutBroken(kTRUE);
