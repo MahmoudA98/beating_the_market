@@ -57,7 +57,7 @@ for(int j=0; j<numtrials; j++){                                                 
         currentvalue=0;
         if(toss==1){
             randomcosts -= arr[i];
-            currentvalue = arr[i];  
+            currentvalue = arr[i];       //just a test here, ignore this.
             token=0; } }
     totalcapital[i]= randomcosts + randomprofits + currentvalue; }
     randresults[j] = totalcapital[sizeofarr-1]; }    }
