@@ -1,6 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <html>
-  <title>inde of /mah011/PHYS291</title>
+  <title>index of /mah011/PHYS291</title>
 <!doctype html>
 <title>PHYS291 project</title>
 <style>
@@ -44,7 +44,7 @@
   }
 footer {
     background: #455DD7;
-    height: 8vh;
+    height: 10vh;
   }
   header, footer, article, nav {
     padding: 1em;
@@ -52,20 +52,28 @@ footer {
 </style>
 <body>
   <div class="col-2">
-    <header><font size="10"><b>NOT YET FINISHED - NEED NEW DEADLINE</b></font></header>
+    <header><font size="10"><b>On trying to beat the Stock market</b></font></header>
     <main class="content">
     <article> 
-<P><b>Project description  </b>
-<br>My project in PHYS291 has been to make a program which analyses any given stock and compares diffrent trading strategies. For this project I am using root, C++ and C. I will make it possible for the user to change the data input and other metrics while using the programme by using root as a GUI.</p>
-<p><b>Codes Description</b>
-<br>The files TSLAdata.txt and APPLdata.txt are the text files which will be analysed by the , the codes are genralised to work on ANY data file of the correct format. newwork.CPP is the algorithm without the gui, it still allows for freedom of choosing the input data file, but the input is through the root terminal, it then analyses the data in multiple ways and plots all the graphs of the diffrent methods.</b>
+<br><br>
+<h3>Contents</h3>
+<p style="color:DodgerBlue;">
+<a href="index.html#P">1.Project description</a><br>
+<a href="index.html#C">2.Codes description</a><br>
+<a href="index.html#M">3.Main</a><br>
+<a href="index.html#Q">4.Conclusion</a><br>
+<a href="index.html#Z">5.Refrences</a><br>
+<P><h3 id="P"> Project description  </h3>
+My project in PHYS291 has been to make a program which analyses any given stock and compares diffrent trading strategies. For this project I am using root, C++ and C. I will make it possible for the user to change the data input and other metrics while using the programme by using root as a GUI.</p>
+<P><h3 id="C">Codes Description</h3>
+The files TSLAdata.txt and APPLdata.txt are the text files which will be analysed by the , the codes are genralised to work on ANY data file of the correct format. newwork.CPP is the algorithm without the gui, it still allows for freedom of choosing the input data file, but the input is through the root terminal, it then analyses the data in multiple ways and plots all the graphs of the diffrent methods.</b>
 <br>fitTSLA.C and fitAPPL.C generates and plots a function of the best fit line for their respective stocks.
 <br>bothGUI.C is a simple GUI which asks for a data file input as a text entry, if it finds it, it plots the best fit line of that data.
 <br>    
 <br>Get project.tar files <a href="mah011work.tar.gz">here</a>.</p>      
-<p><b>main</b>
+<P><h3 id="M">Main</h3>
 
-  <br>The bulk of the numerical analysis is done by newwork.cpp, starting to run it, it asks for the data file to analyse</p>
+The bulk of the numerical analysis is done by newwork.cpp, starting to run it, it asks for the data file to analyse</p>
   
 <img src="images/rootTerm.png"> 
  <br>
@@ -76,18 +84,30 @@ footer {
 <p><br> I simulated a random trading stategy to see how it does against people trading  which makes decisions to hold or buy/sell depending on tossing a coin and compared the results from this random strategy 100000 times with just buying and holding. </p>
 
 
-<img src="images/simulations.png">
+<img src="images/simulations.png" width="700" height= "400">
 
 <p><br>Assuming a normal distribution and doing some statistical analysis, random trading beats the market 18% of the time almost the same as most day traders (20%)
 
 <p><br>Next i modeled the stock behaviour of both TSLA and APPL stocks using fitTSLA.C and fitAPPL.C, a 9 degree polynomial was the best fit i could create, it traced the general shape of the graphs, but not the details. I tried modeling it with a fourier series, but i couldn't succeed.
-
-<img scr="images/fitAPPL.png">  <img scr="images/fitTSLA.png">
+<p>
+<img src="images/APPLfit.png" width="600" height="400">
+<img src="images/TSLAfit.png" width="600" height="400">
 <p><br>The 9 degree polynomials are only a decent model of past performance at best as they drop-off very sharply to below zero in the near future, which is impossible.
-<p><br>Next, I made a more user friendly GUI (bothGUI.C) 
+<p><br>Next, I made a more user friendly GUI (bothGUI.C), this does what the other codes do, but in a more user friendly interface which asks for a data.txt file to read, if it can read it, it plots the best fit line of that data file, otherwise it can send an error message, a demonstaration of this is shown below.
+<p>
+<video width="700" height="500" controls> 
+<source src="images/GUI.mp4" type="video/mp4" >
+<br>Note: if video fomat not supported, use chrome or find it in mah011/PHYS291/images.
+<P><h3 id="Q">Conclusion</h3>
+I was unable to find an algorithm that consistantly beats the stock market, however it was still very fun trying diffrent algorithms and seeing them fail and plotting best fits and looking at diffrent ways of analysing the data. This course was my first time writing serious codes myself on C and C++, i definetly much prefer making graphs and manipulating data on them rather than python, my native language. I will definetly continue using C & C++ in the future.
+
+<P><h3 id="Z"> Refrences </h3>
+[1]<a href="https://finance.yahoo.com/quote/TSLA/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAKUEMLTVexMe_5JG1F4lSxi9TXVjOnh6brFStaoZBNrlqnu_JxK8mSwkkMlwJOABl0jv5kxy1fcyOIbbg7iL8NGI8KdvVN-5g84gOS4XbiXwDc8zcvSV4KftLoL6AwLRHj749U27LehUl5MWMVnlRYmruyzybBc6HQmRzKA05eRZ" </a>TSLA stock data<br>
+[2]<a href="https://finance.yahoo.com/quote/AAPL%3Fp=AAPL/" </a>APPL stock data
+<ul><li><a href="/mul008/"> back </a></li>
 
 
-<ul><li><a href="/mah011/"> back </a></li>
 </ul>
-<footer><b>Author: Mahmoud Ahmed<br>Acknnowledgments: Ladislav Kochbach & Boris Wagner<br>Date last edited:15/06/2020</b></footer>
+<footer><b>Author: Mahmoud Ahmed<br>Date last edited:25/06/2020</b></footer>
 </body></html>
+
