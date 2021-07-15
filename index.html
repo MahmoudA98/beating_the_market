@@ -75,29 +75,29 @@ The files TSLAdata.txt and APPLdata.txt are the text files which will be analyse
 
 The bulk of the numerical analysis is done by newwork.cpp, starting to run it, it asks for the data file to analyse</p>
   
-<img src="images/rootTerm.png"> 
+<img src="image/rootTerm.png"> 
  <br>
 <p>Trying to predict and beat the market (beating the just holding strategy) is a goal for many, however studies show that 80% of those who try to beat the market lose money, with the average loss being 36.3% per year. According to the analysis done by newwork.cpp on TSLA stock if you can accurately predict all the highs and dips over a 5 year period, you can generate a profit of 2114.9%. Just holding the stock for 5 years generates a profit of 212.6%. BUT if you miss just the best traading day every year, your profits are cut in half and if you miss the 3 best trading days each year, you make no profit or loss. similar findings are also found for APPL stock.
 <p>After it analyses the data, it plots the graph of the stock behaviour, the moving average daily percentage change, and trading volume against percentage change. 
 <br><p>
-<img src="images/triple-graph.png">
+<img src="image/triple-graph.png">
 <p><br> I simulated a random trading stategy to see how it does against people trading  which makes decisions to hold or buy/sell depending on tossing a coin and compared the results from this random strategy 100000 times with just buying and holding. </p>
 
 
-<img src="images/simulations.png" width="700" height= "400">
+<img src="image/simulations.png" width="700" height= "400">
 
 <p><br>Assuming a normal distribution and doing some statistical analysis, random trading beats the market 18% of the time almost the same as most day traders (20%)
 
 <p><br>Next i modeled the stock behaviour of both TSLA and APPL stocks using fitTSLA.C and fitAPPL.C, a 9 degree polynomial was the best fit i could create, it traced the general shape of the graphs, but not the details. I tried modeling it with a fourier series, but i couldn't succeed.
 <p>
-<img src="images/APPLfit.png" width="600" height="400">
-<img src="images/TSLAfit.png" width="600" height="400">
+<img src="image/APPLfit.png" width="600" height="400">
+<img src="image/TSLAfit.png" width="600" height="400">
 <p><br>The 9 degree polynomials are only a decent model of past performance at best as they drop-off very sharply to below zero in the near future, which is impossible.
 <p><br>Next, I made a more user friendly GUI (bothGUI.C), this does what the other codes do, but in a more user friendly interface which asks for a data.txt file to read, if it can read it, it plots the best fit line of that data file, otherwise it can send an error message, a demonstaration of this is shown below.
 <p>
 <video width="700" height="500" controls> 
-<source src="images/GUI.mp4" type="video/mp4" >
-<br>Note: if video fomat not supported, use chrome or find it in mah011/PHYS291/images.
+<source src="image/GUI.mp4" type="video/mp4" >
+<br>Note: if video fomat not supported, use chrome or find it in mah011/PHYS291/image.
 <P><h3 id="Q">Conclusion</h3>
 I was unable to find an algorithm that consistantly beats the stock market, however it was still very fun trying diffrent algorithms and seeing them fail and plotting best fits and looking at diffrent ways of analysing the data. This course was my first time writing serious codes myself on C and C++, i definetly much prefer making graphs and manipulating data on them rather than python, my native language. I will definetly continue using C & C++ in the future.
 
